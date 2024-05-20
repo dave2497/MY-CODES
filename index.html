@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f388b1a842.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- header section -->
+    <div id="header">
+        <div class="container">
+            <nav>
+         <img src="Images/Logo dave.svg" alt="Logo">
+    <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header-text">
+  <p>Full Stack Engineer</p>
+  <h1>Hi, I'm <span>Uzuokoh</span><br>Dave from Nigeria</h1>
+  </div>
+   </div>
+    </div>
+    <!--About Section-->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+               <div class="about-col-1">
+                <img src="Images/Dave2.jpeg">
+               </div>
+               <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hey, I'm Uzuokoh Dave  and I use official dave as my nickname on social media. I am a full stack developer.
+                    <br> Passionate about Sports, I like to create solutions and help people solve their problems with the aid of technology.
+                    <br> I am always curious to learn more about new technologies and creative coding.
+              </p>
+                
+                 <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                 </div>
+                 <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>FullStack Developer</span><br>Frontend/Backend Development</li>
+                        <li><span>Frontend Developer</span><br>Web Development</li>
+                        <li><span>Backend Developer</span><br>API Development</li>
+                    </ul>
+                 </div>
+               </div>
+               <div class="tab-contents" id="Experience">
+                <ul>
+                    <li><span>2024-Current</span><br>Go My Code</li>
+                    <li><span>2022-2023</span><br>Start Innovation Hub</li>
+                    <li><span>2021-2022</span><br>E-Library</li>
+                </ul>
+             </div>
+            </div>
+            <div class="tab-contents" id="Education">
+                <ul>
+                    <li><span>2025</span><br>BSC Computer Science</li>
+                    <li><span>2024</span><br>Intern Go My Code</li>
+                    <li><span>2023</span><br>Intern Start Innovation Hub</li>
+                </ul>
+             </div>
+           </div>
+        </div>
+    </div>
+<!-- Services --> 
+<div id="services">
+<div class="container">
+    <h1 class="sub-title">My Services</h1>
+
+    <div class="services-list">
+        
+        <div class="div">
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Developer</h2>
+            <p>Responsive, user-friendly and visually appealing websites that meet your business needs.</p>
+            <a href="#">Learn more</a>
+        </div>
+        <div>
+            <i class="fa-solid fa-laptop-code"></i>
+            <h2>Frontend Developer</h2>
+            <p>Custom, scalable and secure web applications that drive business growth.</p>
+            <a href="#">Learn more</a>
+        </div>
+        <div>
+            <i class="fa-solid fa-terminal"></i>
+            <h2>Backend Developer</h2>
+            <p>Robust, scalable and secure backend solutions that power your business.</p>
+            <a href="#">Learn more</a>
+        </div>
+       
+    </div>
+</div>
+
+
+
+</div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contnts");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link");
+
+            }
+            for(tabcontent of tabcontents ){
+                tabcontent.classlist.remove("active-tab");
+        }
+         event.currentTarget.classlist.add("active-link");
+         document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+</body>
+</html>
